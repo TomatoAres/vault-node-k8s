@@ -1,0 +1,19 @@
+# Ignore Git-related files
+.git
+.gitignore
+
+# Ignore Node.js modules
+node_modules
+
+# Ignore build artifacts
+dist
+build
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+*.swp
+
+# Ignore editor-specific files
+.vscode
+.idea
