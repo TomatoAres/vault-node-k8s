@@ -5,7 +5,7 @@ const fs = require('fs');
 const app = express();
 const port = process.env.SERVICE_PORT || 8080;
 const vaultUrl = process.env.VAULT_ADDR || 'http://vault:8200';
-const vaultToken = 'root';
+// const vaultToken = 'root';
 const jwtPath = process.env.JWT_PATH;
 const secretsPath = process.env.SECRET_PATH || 'secret/data/webapp/config';
 const role = process.env.ROLE || 'webapp';
@@ -13,8 +13,8 @@ const role = process.env.ROLE || 'webapp';
 
 const vault = Vault({
   apiVersion: 'v1',
-  endpoint: vaultUrl,
-  token: vaultToken
+  endpoint: vaultUrl
+  // token: vaultToken
 });
 
 app.get('/', async (req, res) => {
